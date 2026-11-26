@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حديد — مكملات وأدوات الجيم</title>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef0ec;--surface:#fff;--ink:#1d2229;--muted:#5d6672;--line:#d5d9d3;--blue:#1f4e8c;--yellow:#f0b81c;--green:#2f8a4f;--red:#c63d3d;--on-blue:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181d;--surface:#1d232a;--ink:#eef0ec;--muted:#9aa4b0;--line:#323a43;--blue:#5b8fd4;--on-blue:#0d1b2e}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Readex Pro",Tahoma,Arial,sans-serif;line-height:1.7}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.promo{background:var(--ink);color:var(--bg);text-align:center;font-size:.85rem;padding:6px 10px}
+header{display:flex;align-items:center;gap:14px;padding:14px 0;flex-wrap:wrap}
+.logo{font-weight:700;font-size:1.5rem}
+.search{flex:1;min-width:180px;padding:9px 14px;border:2px solid var(--line);border-radius:8px;background:var(--surface)}
+.cartbtn{background:var(--blue);color:var(--on-blue);border:0;border-radius:8px;padding:9px 16px;font-weight:600}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;padding:28px 0 36px}
+.hero h1{font-size:clamp(2rem,5.5vw,3.5rem);line-height:1.2;margin:0 0 12px}
+.hero p{color:var(--muted);max-width:46ch;margin:0 0 20px}
+.cta{background:var(--blue);color:var(--on-blue);border:0;border-radius:8px;padding:12px 24px;font-weight:600;text-decoration:none;display:inline-block;text-align:center}
+.bar{display:flex;align-items:center;direction:ltr}
+.bar .sleeve{height:14px;flex:1;background:linear-gradient(#aab1b9,#7d848c)}
+.bar .plate{width:26px;border-radius:4px;margin-inline-start:4px}
+.bar .collar{width:12px;height:36px;background:#555d66;border-radius:3px;margin:0 4px}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:34px}
+.trust div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;font-size:.9rem}
+.trust b{display:block}
+h2{font-size:1.6rem;margin:0 0 14px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.tab,.sort{background:transparent;border:2px solid var(--line);border-radius:8px;padding:6px 14px}
+.sort{background:var(--surface);margin-inline-start:auto}
+.tab[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;position:relative}
+.pic{background:var(--bg);border-radius:10px 10px 0 0;padding:14px;display:flex;justify-content:center}
+.pic svg{height:150px;width:auto}
+.badge{position:absolute;top:10px;inset-inline-start:10px;background:var(--red);color:#fff;border-radius:6px;padding:0 8px;font-size:.8rem;font-weight:600}
+.body{padding:14px;display:flex;flex-direction:column;gap:5px;flex:1}
+.brand{color:var(--muted);font-size:.8rem}
+.body h3{margin:0;font-size:1rem}
+.stars{color:var(--yellow);font-size:.9rem;letter-spacing:1px}
+.stars small{color:var(--muted);letter-spacing:0}
+.desc{color:var(--muted);font-size:.85rem;flex:1}
+.flv{padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);width:100%}
+.stock{font-size:.8rem;color:var(--green)}.stock.low{color:var(--red)}
+.row{display:flex;align-items:center;justify-content:space-between;margin-top:6px;gap:8px}
+.price{font-weight:700}.old{color:var(--muted);text-decoration:line-through;font-size:.85rem;margin-inline-start:6px;font-weight:400}
+.add{background:var(--blue);color:var(--on-blue);border:0;border-radius:6px;padding:6px 14px}
+.add:disabled{background:var(--line);cursor:not-allowed}
+.empty{padding:30px;text-align:center;color:var(--muted);grid-column:1/-1}
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;margin:44px 0;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.calc label{display:block;font-weight:600;margin-bottom:6px}
+.calc input,.form input,.form select{width:100%;padding:9px;border:2px solid var(--line);border-radius:8px;background:var(--bg)}
+.out{display:grid;gap:10px}
+.out div{border-inline-start:8px solid var(--yellow);background:var(--bg);padding:8px 14px;border-radius:6px}
+.out div:first-child{border-color:var(--blue)}
+.note{color:var(--muted);font-size:.85rem;margin:0}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 16px;margin-bottom:8px}
+summary{font-weight:600;cursor:pointer}
+footer{border-top:1px solid var(--line);padding:22px 0;margin-top:36px;color:var(--muted);font-size:.9rem}
+#drawer{position:fixed;inset:0 auto 0 0;width:min(400px,100%);background:var(--surface);border-right:1px solid var(--line);transform:translateX(-102%);transition:transform .25s;padding:18px;padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:calc(18px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;z-index:20;overflow:auto;visibility:hidden}
+#drawer.open{transform:none;visibility:visible}
+.item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);gap:8px;font-size:.9rem}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:28px;height:28px;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.ship{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:6px 0}
+.ship i{display:block;height:100%;background:var(--green);width:0;transition:width .3s}
+.sum div{display:flex;justify-content:space-between;padding:2px 0}
+.sum .t{font-weight:700;font-size:1.1rem;border-top:1px solid var(--line);margin-top:6px;padding-top:8px}
+.form{display:grid;gap:8px;margin:12px 0}
+.err{color:var(--red);font-size:.85rem;min-height:1.2em}
+#toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 18px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}
+#toast.show{opacity:1}
+.calc select{width:100%;padding:9px;border:2px solid var(--line);border-radius:8px;background:var(--bg)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fields .full{grid-column:1/-1}
+.out .big{font-size:1.5rem}
+@media(max-width:720px){.hero,.calc{grid-template-columns:1fr}.bar{order:-1}}
+@media (prefers-reduced-motion:reduce){#drawer,.ship i{transition:none}}
+</style>
+</head>
+<body>
+<div class="promo">شحن مجاني للطلبات فوق ١٥٠٠ ج.م — الدفع عند الاستلام — خصم ١٠٪ على أول طلب بكود HADEED10</div>
+<div class="wrap">
+<header>
+  <div class="logo">حديد</div>
+  <input class="search" id="q" type="search" placeholder="دور على منتج: بروتين، كرياتين، حزام..." aria-label="بحث">
+  <button class="cartbtn" id="openCart">السلة (<span id="count">0</span>)</button>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>مكملات أصلية<br>وأدوات تمرين</h1>
+    <p>واي بروتين وكرياتين وأدوات جيم بأسعار واضحة. الشحن لكل المحافظات والدفع عند الاستلام.</p>
+    <a class="cta" href="#shop">تسوق دلوقتي</a>
+  </div>
+  <div class="bar" aria-hidden="true">
+    <div class="sleeve"></div>
+    <div class="plate" style="height:190px;background:var(--red)"></div><div class="plate" style="height:160px;background:var(--blue)"></div><div class="plate" style="height:130px;background:var(--yellow)"></div><div class="plate" style="height:100px;background:var(--green)"></div>
+    <div class="collar"></div><div class="sleeve" style="flex:.4"></div>
+  </div>
+</section>
+
+<section class="trust">
+  <div><b>منتجات أصلية</b>من موزعين معتمدين، مع تاريخ صلاحية على كل عبوة</div>
+  <div><b>توصيل ٢–٣ أيام</b>القاهرة والجيزة أسرع، والباقي حسب المحافظة</div>
+  <div><b>استبدال خلال ٧ أيام</b>لو العبوة مقفولة وسليمة</div>
+</section>
+
+<section id="shop">
+  <h2>المنتجات</h2>
+  <div class="tools" id="tabs">
+    <button class="tab" data-c="all" aria-pressed="true">الكل</button>
+    <button class="tab" data-c="whey" aria-pressed="false">واي بروتين</button>
+    <button class="tab" data-c="creatine" aria-pressed="false">كرياتين</button>
+    <button class="tab" data-c="gear" aria-pressed="false">أدوات الجيم</button>
+    <select class="sort" id="sort" aria-label="ترتيب">
+      <option value="def">الترتيب: الأكثر طلبًا</option>
+      <option value="lo">السعر: الأقل أولًا</option>
+      <option value="hi">السعر: الأعلى أولًا</option>
+      <option value="rate">الأعلى تقييمًا</option>
+    </select>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="calc">
+  <div>
+    <h2>حاسبة الاحتياج اليومي</h2>
+    <label for="w">وزنك بالكيلو</label>
+    <input id="w" type="number" min="30" max="250" value="80" inputmode="numeric">
+    <p class="note" style="margin-top:10px">أرقام استرشادية عامة. لو عندك مشاكل في الكلى أو بتاخد أدوية، اسأل دكتور قبل أي مكمل.</p>
+  </div>
+  <div class="out">
+    <div>كرياتين مونوهيدرات: <strong>٣–٥ جرام</strong> يوميًا (جرعة ثابتة)</div>
+    <div>بروتين كلي: <strong id="pr"></strong> جرام يوميًا من الأكل والمكملات</div>
+    <div>مياه: <strong id="wa"></strong> لتر على الأقل</div>
+  </div>
+</section>
+
+<section class="calc" id="cal">
+  <div>
+    <h2>حاسبة السعرات الحرارية</h2>
+    <div class="fields">
+      <div><label for="cg">النوع</label><select id="cg"><option value="m">ذكر</option><option value="f">أنثى</option></select></div>
+      <div><label for="ca">العمر</label><input id="ca" type="number" min="14" max="90" value="25" inputmode="numeric"></div>
+      <div><label for="cw">الوزن (كجم)</label><input id="cw" type="number" min="30" max="250" value="80" inputmode="numeric"></div>
+      <div><label for="ch">الطول (سم)</label><input id="ch" type="number" min="120" max="230" value="175" inputmode="numeric"></div>
+      <div class="full"><label for="cact">مستوى النشاط</label><select id="cact"><option value="1.2">قليل الحركة (شغل مكتبي، بدون تمرين)</option><option value="1.375">تمرين خفيف ١–٣ أيام في الأسبوع</option><option value="1.55" selected>تمرين متوسط ٣–٥ أيام</option><option value="1.725">تمرين شديد ٦–٧ أيام</option></select></div>
+      <div class="full"><label for="cgoal">هدفك</label><select id="cgoal"><option value="-1">تنشيف (نزول وزن)</option><option value="0" selected>ثبات الوزن</option><option value="1">تضخيم (زيادة وزن)</option></select></div>
+    </div>
+  </div>
+  <div class="out">
+    <div>السعرات اللي جسمك بيحرقها يوميًا: <strong id="ctdee"></strong> سعر</div>
+    <div>السعرات المستهدفة لهدفك: <strong class="big" id="ctar"></strong> سعر يوميًا</div>
+    <div>بروتين: <strong id="cp"></strong> جم — كارب: <strong id="cc"></strong> جم — دهون: <strong id="cf"></strong> جم</div>
+    <p class="note">الحساب بمعادلة ميفلين-سانت جيور وهو تقدير. راقب وزنك أسبوعين وعدّل ١٠٠–٢٠٠ سعر حسب النتيجة.</p>
+  </div>
+</section>
+
+<section>
+  <h2>أسئلة شائعة</h2>
+  <details><summary>الكرياتين هل بيضر الكلى؟</summary><p class="note">الأبحاث على أصحاب الكلى السليمة بتوضح إن الجرعة العادية (٣–٥ جرام) آمنة. لو عندك مرض كلى، استشر دكتور الأول.</p></details>
+  <details><summary>هل لازم أشرب الواي بعد التمرين على طول؟</summary><p class="note">لا. المهم إجمالي البروتين في اليوم، والتوقيت تفصيلة صغيرة.</p></details>
+  <details><summary>إزاي أتأكد إن المنتج أصلي؟</summary><p class="note">اتأكد من الختم المقفول وتاريخ الصلاحية وكود الدفعة على العبوة، واشتري من موزع معتمد.</p></details>
+</section>
+</div>
+
+<footer><div class="wrap">حديد © 2026 — الأسعار والمنتجات والعلامات التجارية أمثلة للعرض فقط ولا تمثل منتجات حقيقية.</div></footer>
+
+<aside id="drawer" aria-label="سلة المشتريات">
+  <div class="row" style="margin:0 0 8px"><h2 style="margin:0">السلة</h2><button class="tab" id="closeCart">إغلاق</button></div>
+  <div id="items"></div>
+  <p class="note" id="shipmsg"></p><div class="ship"><i id="shipbar"></i></div>
+  <div class="sum">
+    <div><span>المنتجات</span><span id="sub"></span></div>
+    <div><span>الشحن</span><span id="shf"></span></div>
+    <div id="dr" hidden><span>خصم ١٠٪</span><span id="dv"></span></div>
+    <div class="t"><span>الإجمالي</span><span id="tot"></span></div>
+  </div>
+  <div class="form">
+    <input id="code" placeholder="كود خصم (اختياري)" aria-label="كود خصم">
+    <input id="nm" placeholder="الاسم" aria-label="الاسم" autocomplete="name">
+    <input id="ph" placeholder="رقم الموبايل (01xxxxxxxxx)" aria-label="رقم الموبايل" inputmode="tel" autocomplete="tel">
+    <select id="gov" aria-label="المحافظة">
+      <option value="45">القاهرة / الجيزة — ٤٥ ج.م</option>
+      <option value="55">الإسكندرية — ٥٥ ج.م</option>
+      <option value="60">الدلتا (المنوفية، الغربية...) — ٦٠ ج.م</option>
+      <option value="75">الصعيد وباقي المحافظات — ٧٥ ج.م</option>
+    </select>
+    <input id="ad" placeholder="العنوان بالتفصيل" aria-label="العنوان" autocomplete="street-address">
+    <div class="err" id="err" role="alert"></div>
+  </div>
+  <button class="cta" id="checkout" style="width:100%">أكّد الطلب على واتساب</button>
+</aside>
+<div id="toast" role="status"></div>
+
+<script>
+const WA="201000000000"; // غيّر الرقم برقم الواتساب الخاص بك
+const FREE=1500;
+const F={
+ ch:["شوكولاتة","#6b4226"],va:["فانيليا","#e8c98a"],st:["فراولة","#d9577a"],cf:["كوكيز","#b88a5a"],un:["بدون نكهة","#dfe3e6"]
+};
+const P=[
+{id:1,c:"whey",b:"أيرون لاب",n:"واي بروتين ٢ باوند",d:"٢٥ جم بروتين في السكوب، ٦٥ جرعة.",p:1990,o:2350,r:4.6,v:312,s:24,f:["ch","va","st","cf"],k:"#1f4e8c"},
+{id:2,c:"whey",b:"أيرون لاب",n:"واي أيزوليت ٥ باوند",d:"لاكتوز أقل وبروتين أنقى، ٦٥ جرعة.",p:4200,o:0,r:4.8,v:178,s:3,f:["ch","va"],k:"#1f4e8c"},
+{id:3,c:"creatine",b:"بيور باور",n:"كرياتين مونوهيدرات ٣٠٠ جم",d:"٦٠ جرعة، ٥ جم للجرعة.",p:750,o:0,r:4.7,v:524,s:40,f:["un"],k:"#f0b81c"},
+{id:4,c:"creatine",b:"بيور باور",n:"كرياتين مونوهيدرات ٥٠٠ جم",d:"١٠٠ جرعة، عبوة التوفير.",p:1100,o:1250,r:4.7,v:289,s:12,f:["un"],k:"#f0b81c"},
+{id:5,c:"gear",b:"هارد ورك",n:"شيكر معدن ٧٠٠ مل",d:"بكرة ستانلس لخلط البودرة بدون كتل.",p:180,o:0,r:4.3,v:96,s:60,f:[],k:"#2f8a4f"},
+{id:6,c:"gear",b:"هارد ورك",n:"حزام رفع جلد",d:"عرض ١٠ سم لدعم أسفل الظهر.",p:650,o:790,r:4.5,v:141,s:0,f:[],k:"#c63d3d"},
+{id:7,c:"gear",b:"هارد ورك",n:"شرائط رسغ",d:"تثبيت الرسغ في تمارين الضغط.",p:190,o:0,r:4.4,v:77,s:18,f:[],k:"#2f8a4f"},
+{id:8,c:"gear",b:"هارد ورك",n:"قفازات جيم",d:"قبضة ثابتة وحماية للكف.",p:260,o:0,r:4.2,v:64,s:5,f:[],k:"#c63d3d"}
+];
+const $=s=>document.querySelector(s);
+const nf=n=>Math.round(n).toLocaleString("ar-EG");
+const fmt=n=>nf(n)+" ج.م";
+let cat="all",cart={};
+try{cart=JSON.parse(localStorage.getItem("hadeed-cart")||"{}")}catch(e){}
+if(!cart||typeof cart!=="object"||Array.isArray(cart))cart={};
+for(const k of Object.keys(cart)){if(!P.some(p=>p.id==k.split("|")[0])||!(cart[k]>0))delete cart[k]}
+function save(){try{localStorage.setItem("hadeed-cart",JSON.stringify(cart))}catch(e){}}
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("show"),1600)}
+function tub(x,fk){
+  const lab=fk?F[fk][1]:x.k;
+  if(x.c==="gear")return `<svg viewBox="0 0 120 140" role="img" aria-label="${x.n}"><rect x="20" y="30" width="80" height="80" rx="12" fill="${x.k}"/><rect x="34" y="52" width="52" height="36" rx="6" fill="#fff" opacity=".9"/><text x="60" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#1d2229">${x.b}</text></svg>`;
+  return `<svg viewBox="0 0 120 140" role="img" aria-label="${x.n}"><rect x="22" y="8" width="76" height="22" rx="5" fill="#2b3037"/><rect x="16" y="28" width="88" height="106" rx="10" fill="${lab}"/><rect x="24" y="48" width="72" height="62" rx="6" fill="#fff" opacity=".93"/><text x="60" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#1d2229">${x.b}</text><text x="60" y="86" text-anchor="middle" font-size="9" fill="#1d2229">${x.c==="whey"?"WHEY":"CREATINE"}</text><rect x="38" y="94" width="44" height="6" rx="3" fill="${x.k}"/></svg>`;
+}
+function render(){
+  const q=$("#q").value.trim(),s=$("#sort").value;
+  let L=P.filter(x=>(cat==="all"||x.c===cat)&&(!q||(x.n+x.b+x.d).includes(q)));
+  if(s==="def")L.sort((a,b)=>b.v-a.v);if(s==="lo")L.sort((a,b)=>a.p-b.p);if(s==="hi")L.sort((a,b)=>b.p-a.p);if(s==="rate")L.sort((a,b)=>b.r-a.r);
+  $("#grid").innerHTML=L.length?L.map(x=>{
+    const disc=x.o?Math.round((1-x.p/x.o)*100):0;
+    const st=x.s===0?`<span class="stock low">نفدت الكمية</span>`:x.s<=5?`<span class="stock low">باقي ${nf(x.s)} فقط</span>`:`<span class="stock">متوفر</span>`;
+    const fl=x.f.length>1?`<select class="flv" data-id="${x.id}" aria-label="النكهة">${x.f.map(k=>`<option value="${k}">${F[k][0]}</option>`).join("")}</select>`:"";
+    return `<article class="card">${disc?`<span class="badge">خصم ${nf(disc)}٪</span>`:""}<div class="pic" id="pic${x.id}">${tub(x,x.f.length>1?x.f[0]:null)}</div><div class="body"><span class="brand">${x.b}</span><h3>${x.n}</h3><div class="stars">★ ${x.r.toLocaleString("ar-EG")} <small>(${nf(x.v)} تقييم)</small></div><div class="desc">${x.d}</div>${fl}${st}<div class="row"><span class="price">${fmt(x.p)}${x.o?`<span class="old">${fmt(x.o)}</span>`:""}</span><button class="add" data-id="${x.id}" ${x.s===0?"disabled":""}>${x.s===0?"نفدت":"أضف للسلة"}</button></div></div></article>`}).join(""):`<div class="empty">مفيش منتجات مطابقة للبحث. جرب كلمة تانية.</div>`;
+}
+const key=(id,f)=>id+"|"+(f||"");
+function calc(){
+  let sub=0,cnt=0;const ids=Object.keys(cart);
+  $("#items").innerHTML=ids.length?ids.map(k=>{const [id,f]=k.split("|"),x=P.find(p=>p.id==id),q=cart[k];sub+=x.p*q;cnt+=q;
+    return `<div class="item"><span>${x.n}${f?` — ${F[f][0]}`:""}<br><small>${fmt(x.p*q)}</small></span><span class="qty"><button data-m="${k}" aria-label="نقص">−</button>${nf(q)}<button data-a="${k}" aria-label="زود">+</button></span></div>`}).join(""):`<p class="note">السلة فاضية. ضيف منتج من القائمة.</p>`;
+  const free=sub>=FREE,shf=ids.length?(free?0:+$("#gov").value):0;
+  const dOn=$("#code").value.trim().toUpperCase()==="HADEED10"&&sub>0,dv=dOn?sub*.1:0;
+  $("#dr").hidden=!dOn;$("#dv").textContent="−"+fmt(dv);
+  $("#sub").textContent=fmt(sub);$("#shf").textContent=free&&ids.length?"مجاني":fmt(shf);
+  $("#tot").textContent=fmt(sub-dv+shf);$("#count").textContent=nf(cnt);
+  $("#shipbar").style.width=Math.min(100,sub/FREE*100)+"%";
+  $("#shipmsg").textContent=!ids.length?"":free?"مبروك! الشحن مجاني على طلبك.":`باقي ${fmt(FREE-sub)} ويبقى الشحن مجاني.`;
+  return {sub,dv,shf,total:sub-dv+shf};
+}
+$("#tabs").onclick=e=>{const b=e.target.closest(".tab");if(!b)return;cat=b.dataset.c;document.querySelectorAll("#tabs .tab").forEach(t=>t.setAttribute("aria-pressed",t===b));render()};
+$("#q").oninput=render;$("#sort").onchange=render;
+$("#grid").onchange=e=>{const s=e.target.closest(".flv");if(!s)return;const x=P.find(p=>p.id==s.dataset.id);$("#pic"+x.id).innerHTML=tub(x,s.value)};
+$("#grid").onclick=e=>{const b=e.target.closest(".add");if(!b)return;const id=b.dataset.id,sel=b.closest(".card").querySelector(".flv"),k=key(id,sel?sel.value:"");const px=P.find(p=>p.id==id);if((cart[k]||0)>=px.s)return toast("وصلت لأقصى كمية متاحة");cart[k]=(cart[k]||0)+1;save();calc();toast("تمت الإضافة للسلة")};
+$("#items").onclick=e=>{const b=e.target.closest("button");if(!b)return;
+  if(b.dataset.a){const px=P.find(p=>p.id==b.dataset.a.split("|")[0]);if(cart[b.dataset.a]<px.s)cart[b.dataset.a]++;else toast("وصلت لأقصى كمية متاحة")}
+  if(b.dataset.m&&--cart[b.dataset.m]<=0)delete cart[b.dataset.m];
+  save();calc()};
+$("#openCart").onclick=()=>{$("#drawer").classList.add("open");$("#closeCart").focus()};
+$("#closeCart").onclick=()=>{$("#drawer").classList.remove("open");$("#openCart").focus()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#drawer").classList.contains("open"))$("#closeCart").click()});
+$("#gov").onchange=calc;$("#code").oninput=calc;
+$("#checkout").onclick=()=>{
+  const r=calc(),nm=$("#nm").value.trim(),ph=$("#ph").value.replace(/[٠-٩]/g,d=>"٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/\s/g,""),ad=$("#ad").value.trim(),er=$("#err");
+  if(!Object.keys(cart).length)return er.textContent="السلة فاضية.";
+  if(nm.length<3)return er.textContent="اكتب اسمك بالكامل.";
+  if(!/^01[0125]\d{8}$/.test(ph))return er.textContent="رقم الموبايل لازم يكون ١١ رقم ويبدأ بـ 01.";
+  if(ad.length<8)return er.textContent="اكتب العنوان بالتفصيل.";
+  er.textContent="";
+  const lines=Object.keys(cart).map(k=>{const [id,f]=k.split("|"),x=P.find(p=>p.id==id);return `- ${x.n}${f?" ("+F[f][0]+")":""} × ${cart[k]}`}).join("\n");
+  const msg=`طلب جديد من موقع حديد\n${lines}\nالإجمالي: ${Math.round(r.total)} ج.م (شامل الشحن)\nالاسم: ${nm}\nالموبايل: ${ph}\nالعنوان: ${ad}\nالدفع عند الاستلام`;
+  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank","noopener");
+  toast("جهزنا رسالة الطلب على واتساب");
+};
+$("#w").oninput=()=>{const w=Math.max(0,+$("#w").value||0);$("#pr").textContent=nf(w*1.6)+"–"+nf(w*2.2);$("#wa").textContent=(Math.round(w*.035*10)/10).toLocaleString("ar-EG")};
+function cal(){
+  const g=$("#cg").value,a=+$("#ca").value||0,w=+$("#cw").value||0,h=+$("#ch").value||0,act=+$("#cact").value,goal=+$("#cgoal").value;
+  if(a<14||w<30||h<120){["#ctdee","#ctar","#cp","#cc","#cf"].forEach(s=>$(s).textContent="—");return}
+  const bmr=10*w+6.25*h-5*a+(g==="m"?5:-161),tdee=bmr*act;
+  let tar=goal<0?tdee-500:goal>0?tdee+300:tdee;
+  tar=Math.max(tar,g==="m"?1500:1200);
+  const p=w*2,f=tar*.25/9,c=Math.max(0,(tar-p*4-f*9)/4);
+  $("#ctdee").textContent=nf(tdee);$("#ctar").textContent=nf(tar);
+  $("#cp").textContent=nf(p);$("#cc").textContent=nf(c);$("#cf").textContent=nf(f);
+}
+["#cg","#ca","#cw","#ch","#cact","#cgoal"].forEach(s=>$(s).oninput=cal);
+render();calc();$("#w").oninput();cal();
+</script>
+</body>
+</html>
